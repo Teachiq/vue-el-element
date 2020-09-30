@@ -1,29 +1,38 @@
-<!-- # ![alt text](static/favicon.png) vue-el-element -->
+# Forked from https://github.com/Naartti/vue-el-element
+
 # ![Vue el element logo](https://raw.githubusercontent.com/Naartti/vue-el-element/master/public/static/favicon.png) vue-el-element
+
 > Vue components for design elements with custom style guides
 
 # Installation
+
 ```
-npm install --save vue-el-element
+npm install --save @teachiq/vue-el-element
 ```
 
 # Import
+
 ## Globalize all components
+
 ```js
 import Vue from 'vue'
-import VueElElements from 'vue-el-element'
+import VueElElements from '@teachiq/vue-el-element'
 
 Vue.use(VueElElements)
 ```
 
 ## Import selected components
+
 ```js
-import { ElButton, ElTooltip } from 'vue-el-element'
+import { ElButton, ElTooltip } from '@teachiq/vue-el-element'
 ```
 
 # Elements
+
 ## el-button
+
 ![el button](https://raw.githubusercontent.com/Naartti/vue-el-element/master/public/static/el-button.png)
+
 ```xml
 <el-button
   :disabled="Boolean"
@@ -38,7 +47,9 @@ import { ElButton, ElTooltip } from 'vue-el-element'
   Button label
 </el-button>
 ```
+
 Boolean props can also be activated as:
+
 ```xml
 <el-button>
   Primary action
@@ -58,6 +69,7 @@ Boolean props can also be activated as:
 ```
 
 ## el-modal
+
 ```xml
 <el-modal
   v-if="isOpen"
@@ -81,6 +93,7 @@ Boolean props can also be activated as:
 ```
 
 ## el-dropdown
+
 ```xml
 <el-dropdown
   :options="[{
@@ -95,7 +108,9 @@ Boolean props can also be activated as:
 ```
 
 ## el-checkbox
+
 Note that the model is an array
+
 ```xml
 <el-checkbox
   :options="[{
@@ -110,6 +125,7 @@ Note that the model is an array
 ```
 
 ## el-radio-button
+
 ```xml
 <el-radio-button
   :options="[{
@@ -124,7 +140,9 @@ Note that the model is an array
 ```
 
 ## el-multi-switch
+
 ![el multi switch](https://raw.githubusercontent.com/Naartti/vue-el-element/master/public/static/el-multi-switch.png)
+
 ```xml
 <el-multi-switch
   :options="[{
@@ -139,7 +157,9 @@ Note that the model is an array
 ```
 
 ## el-tooltip
+
 Place the tooltip within the item you want to describe. It will place itself at the center of that element. Note that you need the parent element not to have static positioning.
+
 ```xml
 <div style="{ position: relative }">
 
@@ -152,6 +172,7 @@ Place the tooltip within the item you want to describe. It will place itself at 
 ```
 
 ## el-message
+
 ```xml
 <el-message
   :success="Boolean"
@@ -166,6 +187,7 @@ Place the tooltip within the item you want to describe. It will place itself at 
 ```
 
 ## el-input
+
 ```xml
 <el-input
   :success="Boolean"
@@ -175,6 +197,7 @@ Place the tooltip within the item you want to describe. It will place itself at 
 ```
 
 ## el-textarea
+
 ```xml
 <el-textarea
   :success="Boolean"
@@ -184,7 +207,9 @@ Place the tooltip within the item you want to describe. It will place itself at 
 ```
 
 ## el-tag
+
 ![el tag](https://raw.githubusercontent.com/Naartti/vue-el-element/master/public/static/el-tag.png)
+
 ```xml
 <el-tag
   :success="Boolean"
@@ -199,6 +224,7 @@ Place the tooltip within the item you want to describe. It will place itself at 
 ```
 
 ## el-menu & el-menu-item
+
 ```xml
 <el-menu
   align="right"
@@ -221,8 +247,10 @@ Place the tooltip within the item you want to describe. It will place itself at 
 ```
 
 ## el-tab & el-tab-item
+
 Horisonal navigation
 ![el tab](https://raw.githubusercontent.com/Naartti/vue-el-element/master/public/static/el-tab.png)
+
 ```xml
 <el-tab>
   <el-tab-item title="Tab 1">
@@ -235,6 +263,7 @@ Horisonal navigation
 ```
 
 ## el-inline
+
 ```xml
 <el-inline
   :stretch="Boolean"
@@ -247,6 +276,7 @@ Horisonal navigation
 ```
 
 ## el-column
+
 ```xml
 <el-column>
   <el-column-item
@@ -265,6 +295,7 @@ Horisonal navigation
 ```
 
 ## el-loader
+
 ```xml
 <el-loader
   :margin-top="Boolean"
@@ -272,6 +303,7 @@ Horisonal navigation
 ```
 
 ## el-sticky-header & el-sticky-footer
+
 ```xml
 <el-sticky-header>
   content...
@@ -283,9 +315,11 @@ Horisonal navigation
 ```
 
 # Change style guide
+
 The elements' css classes follow the BEM naming scheematics.
 
 ## Rounded button
+
 ```css
 .el-button {
   height: 30px;
@@ -294,17 +328,19 @@ The elements' css classes follow the BEM naming scheematics.
 ```
 
 ## Change danger color of button
+
 ```css
 .el-button--danger {
-  background-color: #FA3E44;
+  background-color: #fa3e44;
 }
 
 .el-button--danger:hover {
-  background-color: #CB3837;
+  background-color: #cb3837;
 }
 ```
 
 ## Change modal styling
+
 ```css
 .el-modal__body {
   border-radius: 0px;
@@ -316,10 +352,9 @@ The elements' css classes follow the BEM naming scheematics.
 }
 ```
 
-
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -328,7 +363,8 @@ npm run serve
 ```
 
 ## Rollup upgrade
-|Size|Comment|
-|-|-|
-|498|Vue-cli build|
-|176|Rollup|
+
+| Size | Comment       |
+| ---- | ------------- |
+| 498  | Vue-cli build |
+| 176  | Rollup        |

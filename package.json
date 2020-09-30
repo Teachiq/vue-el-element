@@ -1,13 +1,17 @@
 {
-  "name": "vue-el-element",
+  "name": "@teachiq/vue-el-element",
   "version": "1.12.8",
   "description": "Vue components for standard design elements",
   "author": "Mattias Naarttijärvi",
   "homepage": "https://elelement.com",
   "license": "MIT",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Naartti/vue-el-element.git"
+    "url": "https://github.com/teachiq/vue-el-element.git"
   },
   "keywords": [
     "ui",
