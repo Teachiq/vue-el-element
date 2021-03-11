@@ -30,6 +30,7 @@
           'el-modal__body--overflow': displayOverflow,
           'el-modal__body--wide': wide
         }"
+        :style="`max-width: ${maxWidth}px`"
         ref="modalBody"
         v-if="isVisible"
         >
@@ -89,6 +90,10 @@ import closeIcon from '@/assets/icons/close.js'
 export default {
   name: 'ElModal',
   props: {
+    maxWidth: {
+      type: Number,
+      default: 700
+    },
     overflow: {
       type: Boolean,
       default: false
