@@ -39,6 +39,10 @@ dropdownOptions: [{
   <select
     @change="onChange"
     class="el-dropdown-field"
+    :class="{
+      'el-dropdown-field--warning' : warning,
+      'el-dropdown-field--success' : success,
+    }"
     :value="value"
     >
 
@@ -61,19 +65,11 @@ export default {
   name: 'ElDropdown',
   mixins: [margin, align],
   props: {
-    value: {
-      default: null,
-      required: true
-    },
-    options: {
-      type: Array,
-      default: () => [],
-      required: true
-    },
-    wide: {
-      type: Boolean,
-      default: false
-    }
+    value: { default: null, required: true },
+    options: { type: Array, default: () => [], required: true },
+    wide: { type: Boolean, default: false },
+    warning: { type: Boolean, default: false },
+    success: { type: Boolean, default: false }
   },
   watch: {
     options: {
@@ -122,6 +118,16 @@ export default {
     cursor: pointer;
     padding-left: 10px;
     color: @color-font-dark;
+    &--warning {
+      color: @color-danger-7;
+      border-color: @color-danger-7;
+      background-color: @color-danger-1;
+    }
+    &--success {
+      color: @color-success-7;
+      border-color: @color-success-7;
+      background-color: @color-success-1;
+    }
   }
 
   .el-dropdown-field:focus {
